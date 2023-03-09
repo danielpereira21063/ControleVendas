@@ -81,17 +81,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="br.com.projeto.conexao\ConnectionFactory.cs" />
+    <Compile Include="br.com.projeto.dao\ClienteDao.cs" />
+    <Compile Include="br.com.projeto.model\Cliente.cs" />
     <Compile Include="br.com.projeto.view\FrmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="br.com.projeto.view\FrmClientes.Designer.cs">
       <DependentUpon>FrmClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -121,10 +118,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="br.com.projeto.conexao\" />
-    <Folder Include="br.com.projeto.dao\" />
-    <Folder Include="br.com.projeto.model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
