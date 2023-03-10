@@ -1,6 +1,7 @@
 ﻿using ControleVendas.br.com.projeto.dao;
 using ControleVendas.br.com.projeto.model;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -9,11 +10,13 @@ namespace ControleVendas.br.com.projeto.view
     public partial class FrmClientes : Form
     {
         private ClienteDao _dao;
+        private Helpers _helpers;
 
         public FrmClientes()
         {
             InitializeComponent();
             _dao = new ClienteDao();
+            _helpers = new Helpers();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -105,6 +108,51 @@ namespace ControleVendas.br.com.projeto.view
 
             dgvCliente.DataSource = _dao.ListarClientes();
 
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            dgvCliente.DataSource = _dao.BuscarClientePorNome(txtPesquisa.Text);
+
+            if (dgvCliente.Rows.Count == 0)
+            {
+                dgvCliente.DataSource = _dao.ListarClientes();
+            }
+        }
+
+        private void txtPesquisaNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var nome = $"%{txtPesquisa.Text}%";
+
+            dgvCliente.DataSource = _dao.BuscarClientePorNome(nome);
+        }
+
+        private void btnBuscarCep_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var dados = new DataSet();
+                string xml = $"https://viacep.com.br/ws/{txtCEP.Text}/xml";
+
+                dados.ReadXml(xml);
+
+                var rows = dados?.Tables[0]?.Rows[0];
+
+                txtEndereco.Text = rows["logradouro"]?.ToString();
+                txtBairro.Text = rows["bairro"]?.ToString();
+                txtCidade.Text = rows["localidade"]?.ToString();
+                txtComplemento.Text = rows["complemento"]?.ToString();
+                cbUF.Text = rows["uf"]?.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Endereço não encontrado, por favor digite manualmente.");
+            }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            _helpers.LimparTela(this);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace ControleVendas.br.com.projeto.view
 {
-    partial class FrmClientes
+    partial class FrmFuncionarios
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnBuscarCep = new System.Windows.Forms.Button();
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtBairro = new System.Windows.Forms.TextBox();
@@ -61,20 +62,27 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.dgvFuncionario = new System.Windows.Forms.DataGridView();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnBuscarCep = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.textSenha = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.cbCargo = new System.Windows.Forms.ComboBox();
+            this.cbNivel = new System.Windows.Forms.ComboBox();
+            this.labelNivel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,8 +94,8 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.panel1.Size = new System.Drawing.Size(756, 81);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(932, 81);
+            this.panel1.TabIndex = 1;
             // 
             // label1
             // 
@@ -97,24 +105,32 @@
             this.label1.Location = new System.Drawing.Point(9, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 25);
+            this.label1.Size = new System.Drawing.Size(254, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Cadastro de clientes";
+            this.label1.Text = "Cadastro de funcionários";
             // 
             // tabClientes
             // 
             this.tabClientes.Controls.Add(this.tabPage1);
             this.tabClientes.Controls.Add(this.tabPage2);
             this.tabClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabClientes.Location = new System.Drawing.Point(7, 86);
+            this.tabClientes.Location = new System.Drawing.Point(0, 85);
             this.tabClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tabClientes.Name = "tabClientes";
             this.tabClientes.SelectedIndex = 0;
-            this.tabClientes.Size = new System.Drawing.Size(742, 299);
-            this.tabClientes.TabIndex = 1;
+            this.tabClientes.Size = new System.Drawing.Size(921, 299);
+            this.tabClientes.TabIndex = 2;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbNivel);
+            this.tabPage1.Controls.Add(this.labelNivel);
+            this.tabPage1.Controls.Add(this.cbCargo);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.textSenha);
+            this.tabPage1.Controls.Add(this.txtUsuario);
             this.tabPage1.Controls.Add(this.btnBuscarCep);
             this.tabPage1.Controls.Add(this.cbUF);
             this.tabPage1.Controls.Add(this.label15);
@@ -148,10 +164,23 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(734, 269);
+            this.tabPage1.Size = new System.Drawing.Size(913, 269);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados pessoais";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCep
+            // 
+            this.btnBuscarCep.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnBuscarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCep.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarCep.Location = new System.Drawing.Point(416, 122);
+            this.btnBuscarCep.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBuscarCep.Name = "btnBuscarCep";
+            this.btnBuscarCep.Size = new System.Drawing.Size(84, 28);
+            this.btnBuscarCep.TabIndex = 33;
+            this.btnBuscarCep.Text = "Buscar";
+            this.btnBuscarCep.UseVisualStyleBackColor = false;
             // 
             // cbUF
             // 
@@ -239,7 +268,7 @@
             // 
             // txtNumero
             // 
-            this.txtNumero.Location = new System.Drawing.Point(645, 161);
+            this.txtNumero.Location = new System.Drawing.Point(627, 198);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(64, 23);
@@ -250,7 +279,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Location = new System.Drawing.Point(581, 165);
+            this.label11.Location = new System.Drawing.Point(563, 202);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 16);
@@ -262,7 +291,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(295, 162);
             this.txtEndereco.Margin = new System.Windows.Forms.Padding(2);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(282, 23);
+            this.txtEndereco.Size = new System.Drawing.Size(265, 23);
             this.txtEndereco.TabIndex = 18;
             // 
             // label10
@@ -444,7 +473,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dgvCliente);
+            this.tabPage2.Controls.Add(this.dgvFuncionario);
             this.tabPage2.Controls.Add(this.btnPesquisar);
             this.tabPage2.Controls.Add(this.txtPesquisa);
             this.tabPage2.Controls.Add(this.label16);
@@ -453,20 +482,19 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(734, 269);
+            this.tabPage2.Size = new System.Drawing.Size(913, 269);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Consulta";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgvCliente
+            // dgvFuncionario
             // 
-            this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(5, 49);
-            this.dgvCliente.Name = "dgvCliente";
-            this.dgvCliente.RowHeadersWidth = 51;
-            this.dgvCliente.Size = new System.Drawing.Size(724, 215);
-            this.dgvCliente.TabIndex = 37;
-            this.dgvCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCliente_CellClick);
+            this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionario.Location = new System.Drawing.Point(5, 49);
+            this.dgvFuncionario.Name = "dgvFuncionario";
+            this.dgvFuncionario.RowHeadersWidth = 51;
+            this.dgvFuncionario.Size = new System.Drawing.Size(724, 215);
+            this.dgvFuncionario.TabIndex = 37;
             // 
             // btnPesquisar
             // 
@@ -480,7 +508,6 @@
             this.btnPesquisar.TabIndex = 36;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = false;
-            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -489,7 +516,6 @@
             this.txtPesquisa.Name = "txtPesquisa";
             this.txtPesquisa.Size = new System.Drawing.Size(282, 26);
             this.txtPesquisa.TabIndex = 5;
-            this.txtPesquisa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesquisaNome_KeyPress);
             // 
             // label16
             // 
@@ -503,92 +529,162 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Nome:";
             // 
-            // btnNovo
+            // btnEditar
             // 
-            this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.ForeColor = System.Drawing.Color.White;
-            this.btnNovo.Location = new System.Drawing.Point(181, 404);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(95, 32);
-            this.btnNovo.TabIndex = 32;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = false;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(280, 404);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(95, 32);
-            this.btnSalvar.TabIndex = 33;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(563, 412);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(95, 32);
+            this.btnEditar.TabIndex = 39;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.White;
-            this.btnExcluir.Location = new System.Drawing.Point(379, 404);
+            this.btnExcluir.Location = new System.Drawing.Point(464, 412);
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(95, 32);
-            this.btnExcluir.TabIndex = 34;
+            this.btnExcluir.TabIndex = 38;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnEditar
+            // btnSalvar
             // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(478, 404);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(95, 32);
-            this.btnEditar.TabIndex = 35;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(365, 412);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(95, 32);
+            this.btnSalvar.TabIndex = 37;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
-            // btnBuscarCep
+            // btnNovo
             // 
-            this.btnBuscarCep.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnBuscarCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarCep.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarCep.Location = new System.Drawing.Point(416, 122);
-            this.btnBuscarCep.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBuscarCep.Name = "btnBuscarCep";
-            this.btnBuscarCep.Size = new System.Drawing.Size(84, 28);
-            this.btnBuscarCep.TabIndex = 33;
-            this.btnBuscarCep.Text = "Buscar";
-            this.btnBuscarCep.UseVisualStyleBackColor = false;
-            this.btnBuscarCep.Click += new System.EventHandler(this.btnBuscarCep_Click);
+            this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.Color.White;
+            this.btnNovo.Location = new System.Drawing.Point(266, 412);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(95, 32);
+            this.btnNovo.TabIndex = 36;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // FrmClientes
+            // txtUsuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.txtUsuario.Location = new System.Drawing.Point(627, 54);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(255, 23);
+            this.txtUsuario.TabIndex = 34;
+            // 
+            // textSenha
+            // 
+            this.textSenha.Location = new System.Drawing.Point(627, 86);
+            this.textSenha.Margin = new System.Windows.Forms.Padding(2);
+            this.textSenha.Name = "textSenha";
+            this.textSenha.Size = new System.Drawing.Size(255, 23);
+            this.textSenha.TabIndex = 35;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label17.Location = new System.Drawing.Point(564, 55);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(59, 16);
+            this.label17.TabIndex = 36;
+            this.label17.Text = "Usuário:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label18.Location = new System.Drawing.Point(571, 90);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(52, 16);
+            this.label18.TabIndex = 37;
+            this.label18.Text = "Senha:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.label19.Location = new System.Drawing.Point(571, 126);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(50, 16);
+            this.label19.TabIndex = 39;
+            this.label19.Text = "Cargo:";
+            // 
+            // cbCargo
+            // 
+            this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "RJ",
+            "SP"});
+            this.cbCargo.Location = new System.Drawing.Point(627, 122);
+            this.cbCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.Size = new System.Drawing.Size(255, 25);
+            this.cbCargo.TabIndex = 40;
+            // 
+            // cbNivel
+            // 
+            this.cbNivel.FormattingEnabled = true;
+            this.cbNivel.Items.AddRange(new object[] {
+            "RJ",
+            "SP"});
+            this.cbNivel.Location = new System.Drawing.Point(627, 158);
+            this.cbNivel.Margin = new System.Windows.Forms.Padding(2);
+            this.cbNivel.Name = "cbNivel";
+            this.cbNivel.Size = new System.Drawing.Size(255, 25);
+            this.cbNivel.TabIndex = 42;
+            // 
+            // labelNivel
+            // 
+            this.labelNivel.AutoSize = true;
+            this.labelNivel.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNivel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelNivel.Location = new System.Drawing.Point(571, 162);
+            this.labelNivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelNivel.Name = "labelNivel";
+            this.labelNivel.Size = new System.Drawing.Size(38, 16);
+            this.labelNivel.TabIndex = 41;
+            this.labelNivel.Text = "Nível";
+            // 
+            // FrmFuncionarios
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 445);
+            this.ClientSize = new System.Drawing.Size(932, 476);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.tabClientes);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmClientes";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de clientes";
-            this.Load += new System.EventHandler(this.FrmClientes_Load);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Name = "FrmFuncionarios";
+            this.Text = "FrmFuncionarios";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabClientes.ResumeLayout(false);
@@ -596,7 +692,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionario)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,43 +703,51 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabClientes;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox txtRG;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox txtCelular;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtCEP;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnBuscarCep;
+        private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cbUF;
-        private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.DataGridView dgvCliente;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox txtRG;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dgvFuncionario;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Button btnBuscarCep;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textSenha;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.ComboBox cbCargo;
+        private System.Windows.Forms.ComboBox cbNivel;
+        private System.Windows.Forms.Label labelNivel;
     }
 }

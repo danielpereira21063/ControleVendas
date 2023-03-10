@@ -143,5 +143,63 @@ namespace ControleVendas.br.com.projeto.dao
                 _connection.Close();
             }
         }
+
+        public DataTable BuscarClientePorNome(string nome)
+        {
+            try
+            {
+                var dtTable = new DataTable();
+
+                string sql = "select * from tb_clientes where nome like @nome";
+                var mysqlCmd = new MySqlCommand(sql, _connection);
+                mysqlCmd.Parameters.AddWithValue("@nome", nome);
+
+                _connection.Open();
+
+                mysqlCmd.ExecuteNonQuery();
+                var dataAdapter = new MySqlDataAdapter(mysqlCmd);
+                dataAdapter.Fill(dtTable);
+
+                return dtTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar clientes!\n" + ex.Message);
+                return null;
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
+
+        public DataTable ListarClientesPorNome(string nome)
+        {
+            try
+            {
+                var dtTable = new DataTable();
+
+                string sql = "select * from tb_clientes where nome=@nome";
+                var mysqlCmd = new MySqlCommand(sql, _connection);
+                mysqlCmd.Parameters.AddWithValue("@nome", nome);
+
+                _connection.Open();
+
+                mysqlCmd.ExecuteNonQuery();
+                var dataAdapter = new MySqlDataAdapter(mysqlCmd);
+                dataAdapter.Fill(dtTable);
+
+                return dtTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao listar clientes!\n" + ex.Message);
+                return null;
+            }
+            finally
+            {
+                _connection.Close();
+            }
+        }
     }
 }
